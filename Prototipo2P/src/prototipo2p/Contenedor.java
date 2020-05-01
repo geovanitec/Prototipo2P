@@ -135,7 +135,7 @@ System.exit(0);
 
     private void jMenuProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuProductosActionPerformed
 
-          Productos ventana= new Productos ();
+         INGRESO_PRODUCTOS ventana= new INGRESO_PRODUCTOS ();
         jDesktopPane1.add(ventana);
 
 // TODO add your handling code here:
