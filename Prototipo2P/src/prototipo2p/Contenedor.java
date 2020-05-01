@@ -11,6 +11,7 @@ package prototipo2p;
  */
 public class Contenedor extends javax.swing.JFrame {
 
+    
     /**
      * Creates new form Contenedor
      */
@@ -37,6 +38,10 @@ public class Contenedor extends javax.swing.JFrame {
         jMenuVendedores = new javax.swing.JMenuItem();
         jMenuLineas = new javax.swing.JMenuItem();
         jMenuMarcas = new javax.swing.JMenuItem();
+        jMenu4 = new javax.swing.JMenu();
+        jMenuFacturacion = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -111,8 +116,31 @@ public class Contenedor extends javax.swing.JFrame {
 
         jMenu1.add(jMenu3);
 
-        jMenuItem3.setText("Procesos");
-        jMenu1.add(jMenuItem3);
+        jMenu4.setText("Procesos");
+
+        jMenuFacturacion.setText("Facturacion");
+        jMenuFacturacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuFacturacionActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuFacturacion);
+
+        jMenuItem5.setText("Movimiento de inventarios");
+        jMenu4.add(jMenuItem5);
+
+        jMenuItem7.setText("Recibo de Pago");
+        jMenu4.add(jMenuItem7);
+
+        jMenuItem3.setText("Cheques de pago");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu4.add(jMenuItem3);
+
+        jMenu1.add(jMenu4);
 
         jMenuItem4.setText("Informes");
         jMenu1.add(jMenuItem4);
@@ -212,6 +240,19 @@ System.exit(0);
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuLineasActionPerformed
 
+    private void jMenuFacturacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuFacturacionActionPerformed
+
+        Facturacion ventana = new Facturacion ();
+          jDesktopPane1.add(ventana);
+
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jMenuFacturacionActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -252,13 +293,17 @@ System.exit(0);
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuClientes;
+    private javax.swing.JMenuItem jMenuFacturacion;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuLineas;
     private javax.swing.JMenuItem jMenuMarcas;
     private javax.swing.JMenuItem jMenuProductos;
