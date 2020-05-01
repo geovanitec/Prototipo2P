@@ -33,6 +33,10 @@ public class Contenedor extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuClientes = new javax.swing.JMenuItem();
         jMenuProductos = new javax.swing.JMenuItem();
+        jMenuProveedores = new javax.swing.JMenuItem();
+        jMenuVendedores = new javax.swing.JMenuItem();
+        jMenuLineas = new javax.swing.JMenuItem();
+        jMenuMarcas = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
@@ -72,6 +76,38 @@ public class Contenedor extends javax.swing.JFrame {
             }
         });
         jMenu3.add(jMenuProductos);
+
+        jMenuProveedores.setText("Proveedores");
+        jMenuProveedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuProveedoresActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuProveedores);
+
+        jMenuVendedores.setText("Vendedores");
+        jMenuVendedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuVendedoresActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuVendedores);
+
+        jMenuLineas.setText("Lineas");
+        jMenuLineas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuLineasActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuLineas);
+
+        jMenuMarcas.setText("Marcas");
+        jMenuMarcas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuMarcasActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuMarcas);
 
         jMenu1.add(jMenu3);
 
@@ -141,6 +177,41 @@ System.exit(0);
 // TODO add your handling code here:
     }//GEN-LAST:event_jMenuProductosActionPerformed
 
+    private void jMenuProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuProveedoresActionPerformed
+
+         Proveedores ventana= new Proveedores ();
+        jDesktopPane1.add(ventana);
+
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jMenuProveedoresActionPerformed
+
+    private void jMenuVendedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuVendedoresActionPerformed
+
+        
+        vendedores ventana = new vendedores();
+          jDesktopPane1.add(ventana);
+    
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jMenuVendedoresActionPerformed
+
+    private void jMenuMarcasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuMarcasActionPerformed
+       
+         marcas ventana = new marcas();
+          jDesktopPane1.add(ventana);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jMenuMarcasActionPerformed
+
+    private void jMenuLineasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuLineasActionPerformed
+
+         lineas ventana = new lineas();
+          jDesktopPane1.add(ventana);
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jMenuLineasActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -188,6 +259,10 @@ System.exit(0);
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuLineas;
+    private javax.swing.JMenuItem jMenuMarcas;
     private javax.swing.JMenuItem jMenuProductos;
+    private javax.swing.JMenuItem jMenuProveedores;
+    private javax.swing.JMenuItem jMenuVendedores;
     // End of variables declaration//GEN-END:variables
 }
