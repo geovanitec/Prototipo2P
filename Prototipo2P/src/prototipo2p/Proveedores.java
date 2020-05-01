@@ -15,16 +15,17 @@ import javax.swing.JOptionPane;
  *
  * @author Geovani
  */
-public class INGRESO_PRODUCTOS extends javax.swing.JInternalFrame {
-private static String db = "sic";
+public class Proveedores extends javax.swing.JInternalFrame {
+
+    private static String db = "sic";
     private static String user = "rex";
     private static String password = "polloloco900";
     private static String host = "localhost";
     private static String server = "jdbc:mysql://"+ host + "/" +db; 
     /**
-     * Creates new form INGRESO_PRODUCTOS
+     * Creates new form Proveedores
      */
-    public INGRESO_PRODUCTOS() {
+    public Proveedores() {
         initComponents();
     }
 
@@ -37,30 +38,57 @@ private static String db = "sic";
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        txtCodigo = new javax.swing.JTextField();
-        txtBuscarProducto = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
-        txtCodigoLinea = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        txtDireccion = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        btnModificar = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        txtCodigoMarca = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtExistencias = new javax.swing.JTextField();
+        jButton3 = new javax.swing.JButton();
+        txtNit = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        txtCodigo = new javax.swing.JTextField();
         txtEstatus = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        btnModificar = new javax.swing.JButton();
+        txtBuscarProducto = new javax.swing.JTextField();
 
         setClosable(true);
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("PROVEEDORES");
         setVisible(true);
+
+        jLabel5.setText("Estatus Proveedor");
+
+        jButton1.setText("REGISTRAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel6.setText("Direccion Proveedor");
+
+        jLabel1.setText("Nombre Proveedor");
+
+        btnModificar.setText("MODIFICAR");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnModificarActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("INGRESO DE PROVEEDORES");
+
+        jLabel2.setText("Codigo Proveedor");
+
+        jLabel3.setText("Nit Proveedor");
 
         jButton3.setText("ELIMINAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -76,33 +104,7 @@ private static String db = "sic";
             }
         });
 
-        jLabel1.setText("Nombre Producto");
-
-        jLabel7.setText("INGRESO DE PRODUCTOS");
-
-        jLabel2.setText("Codigo Producto");
-
-        jLabel3.setText("Existencia de Productos");
-
-        jLabel4.setText("Codigo Marca");
-
-        jLabel5.setText("Estatus Producto");
-
-        jButton1.setText("REGISTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setText("Codigo Linea");
-
-        btnModificar.setText("MODIFICAR");
-        btnModificar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnModificarActionPerformed(evt);
-            }
-        });
+        jLabel4.setText("Telefono Proveedor");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -122,11 +124,11 @@ private static String db = "sic";
                     .addComponent(txtCodigo)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNombre)
-                    .addComponent(txtCodigoLinea)
-                    .addComponent(txtCodigoMarca, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
-                    .addComponent(txtExistencias)
+                    .addComponent(txtDireccion)
+                    .addComponent(txtTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 195, Short.MAX_VALUE)
+                    .addComponent(txtNit)
                     .addComponent(txtEstatus))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnModificar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,23 +155,23 @@ private static String db = "sic";
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCodigoLinea, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtCodigoMarca, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtExistencias, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtBuscarProducto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         pack();
@@ -181,25 +183,24 @@ private static String db = "sic";
             //local host y el nombre de la base de datos y la contraseña
             Connection cn = DriverManager.getConnection(server, user, password);
             //Esto permitirá el insert
-            PreparedStatement pst = cn.prepareStatement("insert into productos values(?,?,?,?,?,?)");
+            PreparedStatement pst = cn.prepareStatement("insert into proveedores values(?,?,?,?,?,?)");
             //El primer parametro de cada setString es cada ?
             pst.setString(1, txtCodigo.getText().trim());
             pst.setString(2, txtNombre.getText().trim());
-            pst.setString(3, txtCodigoLinea.getText().trim());
-            pst.setString(4, txtCodigoMarca.getText().trim());
-            pst.setString(5, txtExistencias.getText().trim());
+            pst.setString(3, txtDireccion.getText().trim());
+            pst.setString(4, txtTelefono.getText().trim());
+            pst.setString(5, txtNit.getText().trim());
             pst.setString(6, txtEstatus.getText().trim());
-                        JOptionPane.showMessageDialog(null, " REGISTRO  CORRECTAMENTE");
+            JOptionPane.showMessageDialog(null, " REGISTRO  CORRECTAMENTE");
 
             pst.executeUpdate();
 
             txtCodigo.setText("");
             txtNombre.setText("");
-            txtCodigoLinea.setText("");
-            txtCodigoMarca.setText("");
-            txtExistencias.setText("");
+            txtDireccion.setText("");
+            txtTelefono.setText("");
+            txtNit.setText("");
             txtEstatus.setText("");
-
 
         }catch (Exception e){
 
@@ -210,121 +211,92 @@ private static String db = "sic";
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         // TODO add your handling code here:
-        
-        
+
         try {
             String codigo = txtCodigo.getText().trim();
-            
-Connection cn = DriverManager.getConnection(server,user, password);
-PreparedStatement pst = cn.prepareStatement("update productos set codigo_producto = ?, nombre_producto = ?, codigo_linea = ?, codigo_marca = ?, existencia_producto = ? , estatus_producto = ?where codigo = " + codigo);
-            
-           
-      
-            
-             pst.setString(1, txtCodigo.getText().trim());
-            pst.setString(2, txtNombre.getText().trim());
-            pst.setString(3, txtCodigoLinea.getText().trim());
-            pst.setString(4, txtCodigoMarca.getText().trim());
-            pst.setString(5, txtExistencias.getText().trim());
-            pst.setString(6, txtEstatus.getText().trim());
-                                  JOptionPane.showMessageDialog(null, "Midificacion exitosa");
 
-            
+            Connection cn = DriverManager.getConnection(server,user, password);
+            PreparedStatement pst = cn.prepareStatement("update proveedores set codigo_proveedor = ?, nombre_proveedor = ?, direccion_proveedor = ?, telefono_proveedor = ?, nit_proveedor = ? , estatus_proveedor = ?where codigo_proveedor = " + codigo);
+
+            pst.setString(1, txtCodigo.getText().trim());
+            pst.setString(2, txtNombre.getText().trim());
+            pst.setString(3, txtDireccion.getText().trim());
+            pst.setString(4, txtTelefono.getText().trim());
+            pst.setString(5, txtNit.getText().trim());
+            pst.setString(6, txtEstatus.getText().trim());
+            JOptionPane.showMessageDialog(null, "Midificacion exitosa");
+
             pst.executeUpdate();
-            
+
             txtCodigo.setText("");
             txtNombre.setText("");
-            txtCodigoLinea.setText("");
-            txtCodigoMarca.setText("");
-            txtExistencias.setText("");
+            txtDireccion.setText("");
+            txtTelefono.setText("");
+            txtNit.setText("");
             txtEstatus.setText("");
-            
+
         } catch (Exception e) {
         }
-        
-        
-        
-        
-        
-        
+
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        
-      try {
-Connection cn = DriverManager.getConnection(server,user, password);
-PreparedStatement pst = cn.prepareStatement("delete from productos where codigo_producto = ?");
-            
+        try {
+            Connection cn = DriverManager.getConnection(server,user, password);
+            PreparedStatement pst = cn.prepareStatement("delete from proveedores where codigo_proveedor = ?");
+
             pst.setString(1, txtBuscarProducto.getText().trim());
             pst.executeUpdate();
-            
+
             txtCodigo.setText("");
             txtNombre.setText("");
-          txtCodigoLinea.setText("");
-            txtCodigoMarca.setText("");
-            txtExistencias.setText("");
+            txtDireccion.setText("");
+            txtTelefono.setText("");
+            txtNit.setText("");
             txtEstatus.setText("");
-            
-            
-            
-            
+
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Registro Eliminado.");
             txtCodigo.setText("");
             txtNombre.setText("");
-            txtCodigoLinea.setText("");
-            txtCodigoMarca.setText("");
-            txtExistencias.setText("");
+            txtDireccion.setText("");
+            txtTelefono.setText("");
+            txtNit.setText("");
             txtEstatus.setText("");
-            
+
         }
 
-
-
-
-
-
-
-// TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
         try{
-Connection cn = DriverManager.getConnection(server,user, password);
-PreparedStatement pst = cn.prepareStatement("select * from productos where codigo_producto = ?");
+            Connection cn = DriverManager.getConnection(server,user, password);
+            PreparedStatement pst = cn.prepareStatement("select * from proveedores where codigo_proveedor = ?");
             pst.setString(1, txtBuscarProducto.getText().trim());
-            
+
             ResultSet rs = pst.executeQuery();
-            
+
             if(rs.next()){
-                
-                txtCodigo.setText(rs.getString("codigo_producto"));
-                txtNombre.setText(rs.getString("nombre_producto"));
-                txtCodigoLinea.setText(rs.getString("codigo_linea"));
-                txtCodigoMarca.setText(rs.getString("codigo_marca"));
-                txtExistencias.setText(rs.getString("existencia_producto"));
-                txtEstatus.setText(rs.getString("estatus_producto"));
-                
+
+                txtCodigo.setText(rs.getString("codigo_proveedor"));
+                txtNombre.setText(rs.getString("nombre_proveedor"));
+                txtDireccion.setText(rs.getString("direccion_proveedor"));
+                txtTelefono.setText(rs.getString("telefono_proveedor"));
+                txtNit.setText(rs.getString("nit_proveedor"));
+                txtEstatus.setText(rs.getString("estatus_proveedor"));
+
             } else {
-                JOptionPane.showMessageDialog(null, "producto no registrado.");
+                JOptionPane.showMessageDialog(null, "proveedor no registrado.");
             }
-            
+
         }catch (Exception e){
-            
+
         }
-          
 
-
-
-
-
-
-
-
-
-// TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
 
@@ -342,10 +314,10 @@ PreparedStatement pst = cn.prepareStatement("select * from productos where codig
     private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField txtBuscarProducto;
     private javax.swing.JTextField txtCodigo;
-    private javax.swing.JTextField txtCodigoLinea;
-    private javax.swing.JTextField txtCodigoMarca;
+    private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtEstatus;
-    private javax.swing.JTextField txtExistencias;
+    private javax.swing.JTextField txtNit;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }
